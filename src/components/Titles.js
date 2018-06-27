@@ -5,7 +5,7 @@ export default class Titles extends React.Component {
         return (
             <div className="weather-header">
                 <h1 className="weather-header__title">Weather Shower</h1>
-                <p className="weather-header__subtitle">Write a City name and Country code</p>
+                <p className="weather-header__subtitle">Please, enter a city name</p>
             </div>
         );
     }
