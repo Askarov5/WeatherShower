@@ -1,3 +1,6 @@
+Simple Weather Shower App with React
+Weather API: OpenWeatherMap
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -137,12 +140,17 @@ my-app/
     index.html
     favicon.ico
   src/
-    App.css
+    components/
+      Form.js
+      Titles.js
+      Weather.js
+    css/
+      App.css
+      index.css
+      reset.css
     App.js
     App.test.js
-    index.css
     index.js
-    logo.svg
 ```
 
 For the project to build, **these files must exist with exact filenames**:
