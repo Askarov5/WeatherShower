@@ -2,8 +2,10 @@
 @import 'reset.css';
 
 .App {
+    max-width: 100%;
     min-width: 100vw;
     width: 100%;
+    max-height: 100%;
     min-height: 100vh;
     height: 100%;
     display: flex;
@@ -68,7 +70,7 @@
     background-color: #34495e;
     color: #fff;
     padding: 10px;
-    padding-bottom: 5px;
+    padding-top: 25px;
     font-size: 2em;
     text-align: center;
 }
@@ -76,17 +78,26 @@
     background-color: #34495e;
     color: #fff;
     padding: 5px;
-    padding-bottom: 15px;
-    text-align: center;
+    padding-bottom: 10px;
     font-style: italic;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-infos__desc img {
+    margin-right: 10px;
 }
 .weather-infos__temp, .weather-infos__hum {
     width: 50%;
     display: inline-block;
     background-color: #34495e;
-    color: #fff;
+    color: red;
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
+}
+.weather-infos__temp span, .weather-infos__hum span {
+    color: #fff;
 }
 .weather-infos__err {
     color: red;

@@ -9,6 +9,7 @@ const API_KEY = '1e04f58f77760dfaf5f952f7704aa976';
 class App extends Component {
   state = {
     temperature: undefined,
+    icon: undefined,
     city: undefined,
     country: undefined,
     humidity: undefined,
@@ -27,6 +28,7 @@ class App extends Component {
     if(city && country) {
       this.setState({
         temperature: data.main.temp,
+        icon: data.weather[0].icon,
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
@@ -36,6 +38,7 @@ class App extends Component {
     } else {
       this.setState({
         temperature: undefined,
+        icon: undefined,
         city: undefined,
         country: undefined,
         humidity: undefined,
@@ -53,6 +56,7 @@ class App extends Component {
           <Form getWeather={this.getWeather}/>
           <Weather 
             temperature={this.state.temperature}
+            icon={this.state.icon}
             city={this.state.city}
             country={this.state.country}
             humidity={this.state.humidity}
