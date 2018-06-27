@@ -20,12 +20,21 @@ class App extends Component {
   getWeather = async (e) => {
     e.preventDefault();
 
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;    
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&mode=json&appid=${API_KEY}&units=metric`);
+    const city = e.target.elements.city.value;   
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&mode=json&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
     console.log(data);
-    if(city && country) {
+    if(data.cod == '404') {
+      this.setState({
+        temperature: undefined,
+        icon: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        description: undefined,
+        error: 'Value is NOT correct...'
+      });
+    } else if(city) {
       this.setState({
         temperature: data.main.temp,
         icon: data.weather[0].icon,
@@ -58,7 +67,7 @@ class App extends Component {
             temperature={this.state.temperature}
             icon={this.state.icon}
             city={this.state.city}
-            country={this.state.country}
+            country = {this.state.country}
             humidity={this.state.humidity}
             description={this.state.description}
             error={this.state.error}

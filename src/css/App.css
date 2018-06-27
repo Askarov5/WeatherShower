@@ -14,7 +14,7 @@
     font-size: 20px;
 }
 .weather {
-    max-width: 500px;
+    width: 500px;
     border-radius: 10px;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
     padding: 30px 15px;
@@ -37,10 +37,9 @@
     justify-content: space-around;
     padding: 10px 0;
 }
-.weather-inputs__city, 
-.weather-inputs__country,
+.weather-inputs__city,
 .weather-inputs__submit {
-    width: calc(40% - 5px);
+    width: calc(50% - 5px);
     margin: 5px;
     padding: 0 5px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -50,13 +49,7 @@
     line-height: 40px;
     font-size: 1em;
 }
-.weather-inputs__country {
-    width: calc(30% - 5px);
-}
 
-.weather-inputs__submit {
-    width: calc(30% - 5px);
-}
 .weather-inputs__submit:hover {
     background-color: rgba(0, 0, 200, 0.1);
 }
